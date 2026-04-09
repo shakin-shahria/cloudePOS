@@ -1,0 +1,7 @@
+// API client interface for DI
+export interface ApiClient {
+  get<T>(url: string): Promise<T>
+  post<T>(url: string, data: unknown): Promise<T>
+  put<T>(url: string, data: unknown): Promise<T>
+  delete<T>(url: string): Promise<T>
+}
